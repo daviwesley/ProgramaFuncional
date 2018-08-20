@@ -1,6 +1,9 @@
 def is_transitive(relation):
+    ''' (x,y) (y,z) entao (x,z) '''
+    #print(relation)
     for a,b in relation:
         for c,d in relation:
+            #print (a,b),(c,d)
             if b == c and ((a,d) not in relation):
                     #print (a,b),(c,d)
                     return False
@@ -13,6 +16,7 @@ def is_symmetric(Relation):
     return False
 
 def is_reflexive(Set, Relation):
+    ''' (a,a),(b,b) => x = y'''
     newSet = {(a, b) for a in Set for b in Set if a == b}
     if Relation >= newSet:
         return True
