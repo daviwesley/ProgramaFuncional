@@ -1,11 +1,10 @@
 def is_transitive(relation):
-    ''' (x,y) (y,z) entao (x,z) '''
     #print(relation)
     for a,b in relation:
         for c,d in relation:
-            #print (a,b),(c,d)
+            #print ((a,b),(c,d))
             if b == c and ((a,d) not in relation):
-                    #print (a,b),(c,d)
+                    #print ((a,b),(c,d))
                     return False
     return True
 
