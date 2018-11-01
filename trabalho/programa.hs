@@ -24,3 +24,14 @@ programa turma = do op <- menu
                             putStrin "Sair"
                             return()
 menu::IO(Int)
+addAluno(x:xs) = do
+                    putStrin "Digite a matricula"
+                    ma <- lerInteiro
+                    putStrin "Digite o nome do aluno"
+                    nome <- getLine
+                    putStrin "Digite a 1° Nota"
+                    n1 <- lerFloat
+                    putStrin "Digite a 2° Nota"
+                    n1 <- lerFloat
+                    return([(x:xs):(ma,nome,n1,n2)])
+lerFloat::IO(Float)
