@@ -3,6 +3,9 @@ module Main where
 type Aluno = (Int, String, Float, Float)
 type Turma = (ALuno)
 
+lerInteiro::IO(Int)
+lerInteiro = do n <- getline
+                return(read n)
 programa::Turma->IO()
 programa turma = do op <- menu
                     if (op == 1 ) then
@@ -20,3 +23,4 @@ programa turma = do op <- menu
                         do
                             putStrin "Sair"
                             return()
+menu::IO(Int)
